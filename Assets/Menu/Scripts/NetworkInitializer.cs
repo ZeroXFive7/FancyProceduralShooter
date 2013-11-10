@@ -54,11 +54,11 @@ public class NetworkInitializer : MonoBehaviour
 			StartServer();
 		}
 	}
-	
-	enum MenuState { MainMenu, CustomMatch };
+
+    #region UI
+    
+    enum MenuState { MainMenu, CustomMatch };
 	private MenuState menuState = MenuState.MainMenu;
-	
-	#region UI
 	
 	void OnGUI()
 	{
@@ -198,17 +198,24 @@ public class NetworkInitializer : MonoBehaviour
 	
 	void OnServerInitialized()
 	{
-		Debug.Log("Server Initialized.");	
-	}
+		Debug.Log("Server Initialized.");
+        SpawnPlayer(Network.player);
+        Application.LoadLevel(Application.loadedLevel + 1);
+    }
 	
 	void OnConnectedToServer()
 	{
-		Debug.Log("Connected To Server.");	
+		Debug.Log("Connected To Server.");
+
+        SpawnPlayer(Network.player);
+        Application.LoadLevel(Application.loadedLevel + 1);
 	}
 	
 	void OnDisconnectedFromServer()
 	{
-		Debug.Log("Disconnected From Server.");	
+		Debug.Log("Disconnected From Server.");
+
+        Application.LoadLevel(0);
 	}
 	
 	#endregion
@@ -241,6 +248,16 @@ public class NetworkInitializer : MonoBehaviour
 	{
 		return true;	
 	}
+
+    private void SpawnPlayer(NetworkPlayer newPlayer)
+    {
+        int playerNumber = int.Parse(newPlayer.ToString());
+
+        Transform newPlayerTransform = Network.Instantiate(PlayerPrefab, Vector3.zero, Quaternion.identity, playerNumber) as Transform;
+        //NetworkView newPlayerNetwork = newPlayerTransform.networkView;
+
+        //newPlayerTransform.networkView.RPC("SetPlayer", RPCMode.AllBuffered, newPlayer);
+    }
 	
 	#endregion
 }

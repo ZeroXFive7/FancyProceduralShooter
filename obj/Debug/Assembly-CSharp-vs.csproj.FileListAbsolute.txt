@@ -1,0 +1,12 @@
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\Temp\bin\Debug\Assembly-CSharp.dll
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\Temp\bin\Debug\Assembly-UnityScript-firstpass.dll
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\Temp\bin\Debug\UnityEditor.dll
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\Temp\bin\Debug\UnityEngine.dll
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\Temp\bin\Debug\Mono.Cecil.dll
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\Temp\bin\Debug\nunit.framework.dll
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\obj\Debug\Assembly-CSharp.dll
+D:\Users\Josh\My Documents\GitHub\FancyProceduralShooter\obj\Debug\Assembly-CSharp.pdb
