@@ -175,13 +175,15 @@ private var tr : Transform;
 
 private var controller : CharacterController;
 
+private var lastUpVector : Vector3 = Vector3.up;
+
 function Awake () {
 	controller = GetComponent (CharacterController);
 	tr = transform;
 }
 
 private function UpdateFunction () {
-	// We copy the actual velocity into a temporary variable that we can manipulate.
+		// We copy the actual velocity into a temporary variable that we can manipulate.
 	var velocity : Vector3 = movement.velocity;
 	
 	// Update velocity based on input
@@ -386,8 +388,7 @@ private function ApplyInputVelocityChange (velocity : Vector3) {
 	return velocity;
 }
 
-private function ApplyGravityAndJumping (velocity : Vector3) {
-	
+private function ApplyGravityAndJumping (velocity : Vector3) {	
 	if (!inputJump || !canControl) {
 		jumping.holdingJumpButton = false;
 		jumping.lastButtonDownTime = -100;

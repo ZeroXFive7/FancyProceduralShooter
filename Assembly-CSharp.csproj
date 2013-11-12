@@ -37,16 +37,26 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Gameplay\Scripts\PlayerNetworkController.cs" />
-     <Compile Include="Assets\Gameplay\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Gameplay\Environments\Scripts\KillPlayer.cs" />
+     <Compile Include="Assets\Gameplay\Environments\Scripts\WorldGrid.cs" />
+     <Compile Include="Assets\Gameplay\Player\Scripts\PlayerGameplay.cs" />
+     <Compile Include="Assets\Gameplay\Player\Scripts\PlayerNetworkController.cs" />
+     <Compile Include="Assets\Gameplay\Player\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Gameplay\Player\Scripts\WeaponFire.cs" />
      <Compile Include="Assets\Menu\Scripts\NetworkInitializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{1A4A3389-88FF-978E-A8DC-A86E62165E65}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{77795CDC-445F-1FFB-0CA9-547E37BE6688}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
