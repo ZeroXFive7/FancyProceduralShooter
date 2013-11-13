@@ -46,6 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\Gameplay\Environments\Scripts\KillPlayer.cs" />
      <Compile Include="Assets\Gameplay\Environments\Scripts\WorldGrid.cs" />
+     <Compile Include="Assets\Gameplay\Player\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Gameplay\Player\Scripts\PlayerGameplay.cs" />
      <Compile Include="Assets\Gameplay\Player\Scripts\PlayerNetworkController.cs" />
      <Compile Include="Assets\Gameplay\Player\Scripts\PlayerScript.cs" />

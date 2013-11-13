@@ -15,8 +15,6 @@ public class WorldGrid : MonoBehaviour
 	private float arcLength;
 	private int numTilesPerRing;
 	
-	private Vector3 defaultOffset;
-	
 	private Hashtable worldGrid = new Hashtable();
 	
 	void Start()
@@ -28,16 +26,15 @@ public class WorldGrid : MonoBehaviour
 		circumference = numTilesPerRing * TileDimensions;
 		actualRadius = circumference / (2.0f * Mathf.PI);
 		
-		(transform.collider as SphereCollider).center = Center;
-		(transform.collider as SphereCollider).radius = actualRadius;
+		(GetComponent("SphereCollider") as SphereCollider).center = Center;
+		(GetComponent("SphereCollider") as SphereCollider).radius = actualRadius;
 		
 		transform.FindChild("WorldSphere").localScale *= actualRadius;
-		
-		defaultOffset = new Vector3(0.0f, -actualRadius, 0.0f);
+		GameObject.FindGameObjectWithTag("KillZone").transform.localScale *= 1.5f * actualRadius;
 		
 		CreateGridSpaceTile(Vector2.zero);
 		
-		Transform newTile = Instantiate(TilePrefab, Vector2.zero, Quaternion.identity) as Transform;
+		Transform newTile = Instantiate(TilePrefab, new Vector3(0.0f, -actualRadius, 0.0f), Quaternion.identity) as Transform;
 		
 		newTile.localScale *= TileDimensions;
 		newTile.parent = this.transform;

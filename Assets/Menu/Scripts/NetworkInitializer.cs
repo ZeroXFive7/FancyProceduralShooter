@@ -252,8 +252,7 @@ public class NetworkInitializer : MonoBehaviour
     private void SpawnPlayer(NetworkPlayer newPlayer)
     {
         int playerNumber = int.Parse(newPlayer.ToString());
-
-        Transform newPlayerTransform = Network.Instantiate(PlayerPrefab, new Vector3(0.0f, -39.0f, 00.0f), Quaternion.identity, playerNumber) as Transform;
+		Network.Instantiate(PlayerPrefab, new Vector3(0.0f, -39.0f, 00.0f), Quaternion.identity, playerNumber);
         //NetworkView newPlayerNetwork = newPlayerTransform.networkView;
 
         //newPlayerTransform.networkView.RPC("SetPlayer", RPCMode.AllBuffered, newPlayer);

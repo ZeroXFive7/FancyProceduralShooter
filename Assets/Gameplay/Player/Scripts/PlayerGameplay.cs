@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerGameplay : MonoBehaviour
@@ -9,7 +9,7 @@ public class PlayerGameplay : MonoBehaviour
 	public int Kills = 0;
 	public int Deaths = 0;
 	
-	public Vector3 SpawnPoint = new Vector3(0.0f, 10.0f, 0.0f);
+	public Vector3 SpawnPoint = new Vector3(0.0f, -40.0f, 0.0f);
 	
 	public void Awake()
 	{
@@ -22,5 +22,7 @@ public class PlayerGameplay : MonoBehaviour
 		
 		HP = MaxHP;
 		transform.position = SpawnPoint;
+		
+		(GetComponent("PlayerController") as PlayerController).SetOrientation(Vector3.up, Vector3.forward);
 	}
 }
